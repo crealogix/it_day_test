@@ -30,3 +30,5 @@ var getTweet = function(){
 
 	return utils;
 };
+
+getTweet();
