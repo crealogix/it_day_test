@@ -12,7 +12,8 @@
     "gulp-nodemon": "^1.0.4",
     "gulp-util": "^3.0.1",
     "jshint-stylish": "^0.4.0",
-    "serve-static": "^1.5.3"
+    "serve-static": "^1.5.3",
+    "twitter": "^0.2.11"
   },
   "dependencies": {
     "express": "^4.8.7"
