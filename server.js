@@ -25,10 +25,9 @@ var utils;
 
 var getTweet = function(){ 
 	twit.search('nodejs OR #node', {include_entities:true, count: 15}, function(data) {
+        console.log(util.inspect(data));
     	utils = data;
 	});
 
 	return utils;
 };
-
-getTweet();
