@@ -24,7 +24,7 @@ var twit = new twitter({
 var utils;
 
 var getTweet = function(){ 
-	twit.get('/statuses/show/27593302936.json', {include_entities:true}, function(data) {
+	twit.search('nodejs OR #node', {include_entities:true, count: 15}, function(data) {
     	utils = data;
 	});
 
