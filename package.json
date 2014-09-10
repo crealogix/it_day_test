@@ -13,7 +13,8 @@
     "gulp-util": "^3.0.1",
     "jshint-stylish": "^0.4.0",
     "serve-static": "^1.5.3",
-    "twitter": "^0.2.11"
+    "twitter": "^0.2.11",
+    "q": "^1.0.1"
   },
   "dependencies": {
     "express": "^4.8.7"
