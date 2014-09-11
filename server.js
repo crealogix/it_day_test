@@ -5,9 +5,9 @@ var express = require('express'),
 app.use(express.static(__dirname + '/public'));
 
 app.get('/test', function(req, res){
-    res.send( getTweet().then(function(val){
-        return val;
-    }) );
+    getTweet().then(function(val){
+        res.send( val );
+    })
 });
 
 app.listen(3000, '127.0.0.1', function(){
