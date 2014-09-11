@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="ATTACHMENT">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="144.999" y1="48.0001" x2="144.999" y2="239.69">
+		<stop  offset="0" style="stop-color:#889296"/>
+		<stop  offset="1" style="stop-color:#626C70"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M145,243c-34.7,0-63-28.3-63-63V90c0-24.8,20.2-45,45-45s45,20.2,45,45v90c0,14.9-12.1,27-27,27
+		c-14.9,0-27-12.1-27-27v-72h18v72c0,5,4,9,9,9c5,0,9-4,9-9V90c0-14.9-12.1-27-27-27s-27,12.1-27,27v90c0,24.8,20.2,45,45,45
+		s45-20.2,45-45V72h18v108C208,214.7,179.7,243,145,243z"/>
+</g>
+<g id="LABELS" display="none">
+	<rect y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 65.96 303.0039)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">ATTACHMENT</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

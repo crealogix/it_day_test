@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="UPLOAD">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="144.6555" y1="227.8963" x2="144.6555" y2="105.8708" gradientTransform="matrix(1 7.700000e-03 -7.700000e-03 1 1.0717 -0.921)">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_1_)" points="216,225 72,225 72.1,207 216.1,207 	"/>
+</g>
+<g id="UPLOADED_PAYMENTS">
+	<g>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="143.9951" y1="62.7402" x2="143.9951" y2="189.0325">
+			<stop  offset="0" style="stop-color:#889296"/>
+			<stop  offset="1" style="stop-color:#626C70"/>
+		</linearGradient>
+		<polygon fill="url(#SVGID_2_)" points="135,189 153,189 153,97.5 173.6,118.1 186.4,105.4 153,72 144,63 135,72 101.6,105.4 
+			114.4,118.1 135,97.5 		"/>
+	</g>
+</g>
+<g id="LABELS" display="none">
+	<rect y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 35.8657 303.0039)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">UPLOAD PAYMENTS</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

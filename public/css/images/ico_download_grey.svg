@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="DOWNLOAD">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="142.999" y1="202.6666" x2="142.999" y2="87.7211">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_1_)" points="155.7,147.3 200.3,102.7 187.5,90 143,134.5 98.5,90 85.7,102.7 130.3,147.3 143,160 	"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="143.999" y1="202.6665" x2="143.999" y2="87.7208">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="72" y="182.3" fill="url(#SVGID_2_)" width="144" height="18"/>
+</g>
+<g id="LABELS" display="none">
+	<rect x="0" y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 72.7578 303.0034)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">DOWNLOAD</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

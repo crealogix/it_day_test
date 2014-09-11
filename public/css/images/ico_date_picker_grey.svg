@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="CALANDER">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="143.999" y1="233.3324" x2="143.999" y2="46.2746">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M225,234H63c-19.8,0-27-16.1-27-27V81c0-10.9,7.2-27,27-27h9v18h-9c-4.8,0-6.5,1.9-7.5,3.7
+		c-1.1,2.1-1.4,4.6-1.5,5.4v125.8c0,0.8,0.3,3.3,1.5,5.4c1,1.8,2.7,3.7,7.5,3.7h162c4.8,0,6.5-1.9,7.5-3.7c1.1-2.1,1.4-4.6,1.5-5.4
+		V81.1c0-0.8-0.3-3.3-1.5-5.4c-1-1.8-2.7-3.7-7.5-3.7h-9V54h9c19.8,0,27,16.1,27,27v126C252,217.9,244.8,234,225,234z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="143.999" y1="233.3339" x2="143.999" y2="46.2757">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<path fill="url(#SVGID_2_)" d="M189,36c-5,0-9,4-9,9v9h-72v-9c0-5-4-9-9-9s-9,4-9,9v45h18V72h72v18h18V45C198,40,194,36,189,36z"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="89.999" y1="233.3324" x2="89.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="72" y="108" fill="url(#SVGID_3_)" width="36" height="18"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="143.999" y1="233.3324" x2="143.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="126" y="108" fill="url(#SVGID_4_)" width="36" height="18"/>
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="197.999" y1="233.3324" x2="197.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="180" y="108" fill="url(#SVGID_5_)" width="36" height="18"/>
+	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="89.999" y1="233.3324" x2="89.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="72" y="144" fill="url(#SVGID_6_)" width="36" height="18"/>
+	<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="143.999" y1="233.3324" x2="143.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="126" y="144" fill="url(#SVGID_7_)" width="36" height="18"/>
+	<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="197.999" y1="233.3324" x2="197.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="180" y="144" fill="url(#SVGID_8_)" width="36" height="18"/>
+	<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="89.999" y1="233.3324" x2="89.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="72" y="180" fill="url(#SVGID_9_)" width="36" height="18"/>
+	<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="143.999" y1="233.3324" x2="143.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="126" y="180" fill="url(#SVGID_10_)" width="36" height="18"/>
+	<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="197.999" y1="233.3324" x2="197.999" y2="46.2764">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="180" y="180" fill="url(#SVGID_11_)" width="36" height="18"/>
+</g>
+<g id="LABELS" display="none">
+	<rect x="0" y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 83.312 303.0034)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">CALANDER</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

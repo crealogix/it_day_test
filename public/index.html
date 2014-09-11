@@ -12,13 +12,135 @@
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
         <!-- fav icon -->
         <link rel="shortcut icon" href="http://79tutorials.com/wp-content/uploads/2014/04/HTML5.ico" />
     </head>
     <body>
-        Hello student! 
-        <br>
-        Check the console for complete .json response.
+        <div class="max-height full-width main-bg bg-gray"></div>
+
+        <header class="navbar-fixed-top bg-white">
+            <div class="container max-width-960 padding-30  ">
+                <div class="row">
+                    <div class="col-md-9 main-title-holder">
+                        <p class="font-60-gray-3 font-light padding-10-0 icon-home padding-left-100">
+                            <span>investments</span>
+                        </p>
+                    </div>
+                    <div class="pull-right user-name padding-20">
+                        <p class="text-right font-26-gray-5 font-light">
+                            Cornelia Abel
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-gray">
+                <div></div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="widget-holder">
+                    <!-- widget header -->
+                    <div class="widget-header bg-white clearfix">
+                         <p class="font-26-gray-5 font-light pull-left padding-20">
+                            --
+                        </p>
+                        <div class="pull-right details-link"></div>
+                        <a class="pull-right padding-20">
+                            <p class="font-26-orange-1 font-light">
+                                --
+                                <span class="font-14-gray-3 font-bold">
+                                    CHF
+                                </span>
+                            </p>
+                        </a>
+                    </div><!-- widget header END -->
+
+                    <!-- sub headers holder -->
+                    <div class="sub-headers-container bg-white">
+
+                        <div class="border-gray padding-0-20">
+                            <div></div>
+                        </div>
+
+                        <!-- table content -->
+                        <div class="table-holder padding-20 margin-top-20">
+                            <!-- table header -->
+                            <div>
+                                <ul class="table-header clearfix">
+                                    <li class="text-left width-35">
+                                        PORTFOLIO
+                                    </li>
+                                    <li class="text-center width-10">CURR</li>
+                                    <li class="text-right">MARKET VALUE</li>
+                                    <li class="text-right">COST VALUE</li>
+                                    <li class="text-right width-15">GAIN / LOSS</li>
+                                </ul> <!-- table header END-->
+
+                                <!-- table content holder -->
+                                <div class="table-content-holder">
+                                    <!-- table content -->
+                                    <!-- ngRepeat: item in data -->
+                                    <ul class="table-content clearfix">
+                                        <li class="width-35 ng-binding">--</li>
+                                        <li class="width-10 text-center">
+                                            --
+                                        </li>
+                                        <li class="text-right ng-binding">
+                                            --
+                                        </li>
+                                        <li class="text-right ng-binding">
+                                            --
+                                        </li>
+                                        <li class="text-right width-15">
+                                            <p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p>
+                                        </li>
+                                    </ul><!-- end ngRepeat: item in data -->
+                                    
+                                    <ul class="table-footer text-right clearfix font-light">
+                                        <li class="width-85">--</li>
+                                        <li>-- %</li>
+                                    </ul>
+                                </div><!-- table content holder END-->
+                            </div>
+                        </div>
+                        <!-- table content END-->
+                    </div><!-- widget sub headers END -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="navbar-fixed-bottom bg-white">
+            <div class="container max-width-960  ">
+                <div class="row">
+                    <div class="col-md-12 clearfix  ">
+                        <a href="#" class="orange-btn pull-right margin-top-12">LOGOUT</a>
+
+                        <ul class="pd-mg-0 pull-right footer-navigation">
+                            <li>
+                                <a href="" class="home active">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="notification-number font-bold">8</span>
+                                <a href="" class="communications">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="notification"></a>
+                            </li>
+                            <li>
+                                <a href="" class="settings"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <script type="text/javascript" src="test.js"></script>
     </body>

@@ -1,18 +1,20 @@
 var express = require('express'),
-    app = express();
+    app = express(),
+    Q = require('q');
 
 app.use(express.static(__dirname + '/public'));
 
 app.get('/test', function(req, res){
-    res.send( getTweet() );
+    res.send( getTweet().then(function(val){
+        return val;
+    }) );
 });
 
 app.listen(3000, '127.0.0.1', function(){
   console.log('node server started');
 });
 
-var util = require('util'),
-    twitter = require('twitter');
+var twitter = require('twitter');
 
 var twit = new twitter({
     consumer_key: 'dDDYuvE5eyBsAD0ouOK1C7MtQ',
@@ -21,12 +23,12 @@ var twit = new twitter({
     access_token_secret: 'FpzsoOQaHHtSltwlnpFL8urLaxamUjM3nZZEHv4B3hv2C'
 });
 
-var utils;
+function getTweet() {
+    var deferred = Q.defer();
 
-var getTweet = function(){ 
-	twit.search('nodejs OR #node', {include_entities:true, count: 15}, function(data) {
-    	utils = data;
-	});
+    twit.search('nodejs OR #node', {include_entities:true, count: 15}, function(data) {
+        deferred.resolve( data );
+    });
 
-	return utils;
+    return deferred.promise;
 };

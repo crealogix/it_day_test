@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="SAVE_AS_PDF">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="143.9995" y1="250.6664" x2="143.9995" y2="33.5198">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="90" y="126" fill="url(#SVGID_1_)" width="108" height="18"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="143.9995" y1="250.6666" x2="143.9995" y2="33.5196">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<path fill="url(#SVGID_2_)" d="M207,252H81c-19.8,0-27-16.1-27-27V63c0-10.9,7.2-27,27-27h102.7L234,86.3V108h-63V54H81
+		c-4.8,0-6.5,1.9-7.5,3.7c-1.1,2.1-1.4,4.6-1.5,5.4v161.8c0,0.8,0.3,3.3,1.5,5.4c1,1.8,2.7,3.7,7.5,3.7h126c4.8,0,6.5-1.9,7.5-3.7
+		c1.1-2.1,1.4-4.6,1.5-5.4V126h18v99C234,235.9,226.8,252,207,252z M189,90h23.3L189,66.7V90z"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="161.9995" y1="44.9995" x2="161.9995" y2="44.9995">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<path fill="url(#SVGID_3_)" stroke="#414042" stroke-width="18" stroke-miterlimit="10" d="M162,45"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="143.9995" y1="250.6664" x2="143.9995" y2="33.5198">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="90" y="162" fill="url(#SVGID_4_)" width="108" height="18"/>
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="143.9995" y1="250.6664" x2="143.9995" y2="33.5198">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<rect x="90" y="198" fill="url(#SVGID_5_)" width="108" height="18"/>
+</g>
+<g id="LABELS" display="none">
+	<rect x="0" y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 76.4741 303.0034)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">SAVE AS PDF</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

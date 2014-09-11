@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="MOVE">
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="143.5224" y1="40.0195" x2="143.5224" y2="247.5525">
+			<stop  offset="0" style="stop-color:#889296"/>
+			<stop  offset="1" style="stop-color:#626C70"/>
+		</linearGradient>
+		<polygon fill="url(#SVGID_1_)" points="134.5,76 134.5,117.3 152.5,117.3 152.5,76 173.2,96.6 185.9,83.9 143.5,41.5 101.2,83.9 
+			113.9,96.6 		"/>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="143.5224" y1="40.0193" x2="143.5224" y2="247.552">
+			<stop  offset="0" style="stop-color:#889296"/>
+			<stop  offset="1" style="stop-color:#626C70"/>
+		</linearGradient>
+		<polygon fill="url(#SVGID_2_)" points="152.5,212.5 152.5,171.3 134.5,171.3 134.5,212.5 113.9,191.9 101.2,204.6 143.5,247 
+			185.9,204.6 173.2,191.9 		"/>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="208.625" y1="40.0195" x2="208.625" y2="247.5527">
+			<stop  offset="0" style="stop-color:#889296"/>
+			<stop  offset="1" style="stop-color:#626C70"/>
+		</linearGradient>
+		<polygon fill="url(#SVGID_3_)" points="203.9,101.9 191.2,114.6 211.8,135.3 171,135.3 171,153.3 211.8,153.3 191.2,173.9 
+			203.9,186.6 246.2,144.3 		"/>
+		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="78.6587" y1="40.0195" x2="78.6587" y2="247.5527">
+			<stop  offset="0" style="stop-color:#889296"/>
+			<stop  offset="1" style="stop-color:#626C70"/>
+		</linearGradient>
+		<polygon fill="url(#SVGID_4_)" points="116.5,153.3 116.5,135.3 75.2,135.3 95.9,114.6 83.2,101.9 40.8,144.3 83.2,186.6 
+			95.9,173.9 75.2,153.3 		"/>
+	</g>
+</g>
+<g id="LABELS" display="none">
+	<rect y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 59.9619 303.0039)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">MOVE MESSAGE</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="AMEND_COLUMNS">
+	<g>
+		<g>
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="169.8135" y1="48" x2="169.8135" y2="239.7648">
+				<stop  offset="0" style="stop-color:#889296"/>
+				<stop  offset="1" style="stop-color:#626C70"/>
+			</linearGradient>
+			<path fill="url(#SVGID_1_)" d="M192.1,51.6l-70,70l12.7,12.7l57.3-57.3l25.5,25.5l-67.4,67.4l-2.6,2.6l-6.4-6.4l-19.1-19.1
+				l-12.7-12.7l-3.7,3.7l-9,9l0,0l0,50.9l50.9,0l0,0l15.4-15.4l80.1-80.1L192.1,51.6z M114.6,180v-14.9l14.9,14.9H114.6z"/>
+			<g>
+				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="144" y1="53.999" x2="144" y2="233.999">
+					<stop  offset="0" style="stop-color:#889296"/>
+					<stop  offset="1" style="stop-color:#626C70"/>
+				</linearGradient>
+				<path fill="url(#SVGID_2_)" d="M216,155v61h-57.5h-11H72.1c0-0.1,0-0.3-0.1-0.4V72h74.3l18-18c-37,0-82,0-92.3,0
+					c-18,0-18,18-18,18v144c0,0,0,18,18,18s126,0,144,0s18-18,18-18s0-40.6,0-79L216,155z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="LABELS" display="none">
+	<rect y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 54.1426 303.0029)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">COMPOSE EMAIL</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

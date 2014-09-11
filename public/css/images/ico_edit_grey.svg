@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="AMEND">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="145.1865" y1="44.5547" x2="145.1865" y2="254.4214">
+		<stop  offset="0" style="stop-color:#889296"/>
+		<stop  offset="1" style="stop-color:#626C70"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M167.5,51.6l-70,70l12.7,12.7l57.3-57.3l25.5,25.5l-67.4,67.4l-2.6,2.6l-6.4-6.4l-19.1-19.1
+		l-12.7-12.7l-3.7,3.7l-9,9l0,0l0,50.9h50.9l0,0l15.4-15.4l80.1-80.1L167.5,51.6z M90,180v-14.9l14.9,14.9H90z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="144" y1="44.5547" x2="144" y2="254.4221">
+		<stop  offset="0" style="stop-color:#889296"/>
+		<stop  offset="1" style="stop-color:#626C70"/>
+	</linearGradient>
+	<rect x="72" y="216" fill="url(#SVGID_2_)" width="144" height="18"/>
+</g>
+<g id="LABELS" display="none">
+	<rect y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 103.5361 303.0039)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">AMEND</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

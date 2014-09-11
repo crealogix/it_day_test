@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="MESSAGE">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="144" y1="240.667" x2="144" y2="74.5616">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M243,151.7v64.2c0,0.8-0.3,3.3-1.5,5.4c-1,1.8-2.7,3.7-7.5,3.7H54c-4.8,0-6.5-1.9-7.5-3.7
+		c-1.1-2.1-1.4-4.6-1.5-5.4v-64.2l-18-9V216c0,10.9,7.2,27,27,27h180c19.8,0,27-16.1,27-27v-73.3L243,151.7z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="144" y1="240.667" x2="144" y2="74.5616">
+		<stop  offset="0" style="stop-color:#626C70"/>
+		<stop  offset="1" style="stop-color:#889296"/>
+	</linearGradient>
+	<path fill="url(#SVGID_2_)" d="M144,181.1L27,122.6V99c0-10.9,7.2-27,27-27h180c19.8,0,27,16.1,27,27v23.6L144,181.1z M45,111.4
+		l99,49.5l99-49.5V99.1c0-0.8-0.3-3.3-1.5-5.4c-1-1.8-2.7-3.7-7.5-3.7H54c-4.8,0-6.5,1.9-7.5,3.7c-1.1,2.1-1.4,4.6-1.5,5.4V111.4z"
+		/>
+</g>
+<g id="LABELS" display="none">
+	<rect y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 89.9678 303.0039)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">MESSAGES</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+<g id="SERVICES">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="144" y1="61.3329" x2="144" y2="231.3328">
+		<stop  offset="0" style="stop-color:#889296"/>
+		<stop  offset="1" style="stop-color:#626C70"/>
+	</linearGradient>
+	<rect x="54" y="216" fill="url(#SVGID_1_)" width="180" height="18"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="144" y1="61.3329" x2="144" y2="231.3329">
+		<stop  offset="0" style="stop-color:#889296"/>
+		<stop  offset="1" style="stop-color:#626C70"/>
+	</linearGradient>
+	<path fill="url(#SVGID_2_)" d="M226.5,176.3c-1.1-2.1-1.4-4.6-1.5-5.4c0-41.6-31.6-75.9-72-80.4V81h9V63h-36v18h9v9.5
+		C94.6,95,63,129.4,63,171c0,0-0.1,2.6-1.3,5c-1,2-2.7,4-7.7,4v18c10.8,0,19.3-5,23.8-14c3-6.1,3.2-11.9,3.2-13
+		c0-34.7,28.3-63,63-63s63,28.3,63,63c0,1.1,0.2,6.9,3.2,13c4.5,9,13,14,23.8,14v-18C229.2,180,227.5,178.1,226.5,176.3z"/>
+</g>
+<g id="LABELS" display="none">
+	<rect y="288" display="inline" fill="none" width="288" height="54"/>
+	
+		<text transform="matrix(1 0 0 1 42.6509 303.0029)" display="inline" fill="#58595B" font-family="'GillSans'" font-size="22" letter-spacing="1">SERVICES (MOBILE)</text>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>
