@@ -1,5 +1,5 @@
 var twitter = require('twitter'),
-	 Q = require('q');
+	Q = require('q');
 
 var twit = new twitter({
     consumer_key: 'dDDYuvE5eyBsAD0ouOK1C7MtQ',
@@ -8,10 +8,10 @@ var twit = new twitter({
     access_token_secret: 'FpzsoOQaHHtSltwlnpFL8urLaxamUjM3nZZEHv4B3hv2C'
 });
 
-exports.getTweet = function(){
+exports.getTweet = function( hashtag ){
     var deferred = Q.defer();
 
-    twit.search('nodejs OR #node', {include_entities:true, count: 15}, function(data) {
+    twit.search( hashtag, {include_entities:true, lang: 'en'}, function(data) {
         deferred.resolve( data );
     });
 

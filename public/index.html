@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-md-9 main-title-holder">
                         <p class="font-60-gray-3 font-light padding-10-0 icon-home padding-left-100">
-                            <span>investments</span>
+                            <span>portfolio</span>
                         </p>
                     </div>
                     <div class="pull-right user-name padding-20">
@@ -43,34 +43,34 @@
 
         <div class="container">
             <div class="row">
-                <div class="widget-holder">
-                    <!-- widget header -->
-                    <div class="widget-header bg-white clearfix">
-                         <p class="font-26-gray-5 font-light pull-left padding-20">
-                            --
-                        </p>
-                        <div class="pull-right details-link"></div>
-                        <a class="pull-right padding-20">
-                            <p class="font-26-orange-1 font-light">
+                <div class="col-xs-7">
+                    <div class="widget-holder">
+                        <!-- widget header -->
+                        <div class="widget-header bg-white clearfix">
+                             <p class="font-26-gray-5 font-light pull-left padding-20">
                                 --
-                                <span class="font-14-gray-3 font-bold">
-                                    CHF
-                                </span>
                             </p>
-                        </a>
-                    </div><!-- widget header END -->
+                            <div class="pull-right details-link"></div>
+                            <a class="pull-right padding-20">
+                                <p class="font-26-orange-1 font-light">
+                                    --
+                                    <span class="font-14-gray-3 font-bold">
+                                        --
+                                    </span>
+                                </p>
+                            </a>
+                        </div><!-- widget header END -->
 
-                    <!-- sub headers holder -->
-                    <div class="sub-headers-container bg-white">
+                        <!-- sub headers holder -->
+                        <div class="sub-headers-container bg-white">
+                            <!-- gray separator -->
+                            <div class="border-gray padding-0-20">
+                                <div></div>
+                            </div>
 
-                        <div class="border-gray padding-0-20">
-                            <div></div>
-                        </div>
-
-                        <!-- table content -->
-                        <div class="table-holder padding-20 margin-top-20">
-                            <!-- table header -->
-                            <div>
+                            <!-- table content -->
+                            <div class="table-holder padding-20 margin-top-20">
+                                <!-- table header -->
                                 <ul class="table-header clearfix">
                                     <li class="text-left width-35">
                                         PORTFOLIO
@@ -106,10 +106,45 @@
                                         <li>-- %</li>
                                     </ul>
                                 </div><!-- table content holder END-->
+                            </div><!-- table content END-->
+                        </div><!-- widget sub headers END -->
+                    </div>
+                </div><!-- col xs 8 -->
+                <div class="col-xs-5">
+                    <div class="widget-holder bg-white padding-20-0">
+                        <div class="col-xs-12">
+                            <p>Add stock to observe</p>
+
+                            <form action="" class="margin-top-20" id="stock-form">
+                               <div class="input-group">
+                                  <input type="text" class="form-control">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Add Stock</button>
+                                  </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xs-12 margin-top-20">
+                            <div class="widget-holder bg-white padding-20">
+                                <h3>Stocks beeing observed</h3>
+
+                                <ul class="stock-list clearfix">
+                                    <li class="clearfix">
+                                        <h4>Dow Jones</h4>
+                                        <div class="indicator">
+                                            <span class="mask"></span>
+                                            <span class="bar"></span>
+                                        </div>
+                                        <div class="stock-options hide">
+                                            <input data-trade="buy" type="button" value="Buy" class="btn btn-info">
+                                            <input data-trade="sell" type="button" value="Sell" class="btn btn-success">
+                                            <input data-trade="stop" type="button" value="Stop tracking" class="btn btn-danger">
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- table content END-->
-                    </div><!-- widget sub headers END -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,6 +177,9 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="test.js"></script>
+        <!-- main script -->
+        <script type="text/javascript" src="js/data.js"></script>
+        <script type="text/javascript" src="js/widgetObserver.js"></script>
+        <script type="text/javascript" src="js/layout.js"></script>
     </body>
 </html
