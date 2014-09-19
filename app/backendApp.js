@@ -11,7 +11,7 @@ var twit = new twitter({
 exports.getTweet = function( hashtag ){
     var deferred = Q.defer();
 
-    twit.search( hashtag, {include_entities:true, lang: 'en'}, function(data) {
+    twit.search( hashtag, {include_entities:true, lang: 'en', geo:true}, function(data) {
         deferred.resolve( data );
     });
 

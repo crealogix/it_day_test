@@ -138,9 +138,7 @@ a:focus {
 .modal {
   display: none;
 }
-.modal-backdrop {
-  display: none;
-}
+
 .blur-modal {
   opacity: 0;
   height: 100%;
@@ -2147,6 +2145,10 @@ body, a, li{
   padding: 0;
 }
 
+.stock-list li{
+  padding: 10px 0;
+}
+
 .stock-list li>*{
   float: left;
 }
@@ -2179,7 +2181,10 @@ body, a, li{
   margin-top: 10px;
   transition: all 0.5s;
   right: 0;
-  width: 10%;
+  width: 50%;
+  border: solid 1px #dbdbdb;
+  border-left: none;
+  box-sizing: border-box;
 }
 
 .bar{
@@ -2208,4 +2213,23 @@ h3{
 .stock-options .btn{
   padding: 2px 10px;
   margin-left: 10px;
+}
+
+.preloader{
+  width: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.highlight{
+  color: #f7941e;
+}
+
+.indicator-positive, .indicator-neagtive{
+  position: absolute;
+  top: -10px;
+}
+
+.indicator-positive{
+  right: 0;
 }

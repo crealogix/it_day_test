@@ -128,19 +128,8 @@
                             <div class="widget-holder bg-white padding-20">
                                 <h3>Stocks beeing observed</h3>
 
-                                <ul class="stock-list clearfix">
-                                    <li class="clearfix">
-                                        <h4>Dow Jones</h4>
-                                        <div class="indicator">
-                                            <span class="mask"></span>
-                                            <span class="bar"></span>
-                                        </div>
-                                        <div class="stock-options hide">
-                                            <input data-trade="buy" type="button" value="Buy" class="btn btn-info">
-                                            <input data-trade="sell" type="button" value="Sell" class="btn btn-success">
-                                            <input data-trade="stop" type="button" value="Stop tracking" class="btn btn-danger">
-                                        </div>
-                                    </li>
+                                <ul id="stock-list" class="stock-list clearfix">
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -177,8 +166,12 @@
             </div>
         </footer>
 
-        <!-- main script -->
+        <!-- Latest compiled and minified bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- main scripts -->
         <script type="text/javascript" src="js/data.js"></script>
+        <script type="text/javascript" src="js/tweetScanner.js"></script>
         <script type="text/javascript" src="js/widgetObserver.js"></script>
         <script type="text/javascript" src="js/layout.js"></script>
     </body>

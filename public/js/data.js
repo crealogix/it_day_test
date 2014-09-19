@@ -1,5 +1,5 @@
 var CLX = function(){
-  return false;
+  return {};
 };
 
 //returns a PROMISE
@@ -7,7 +7,7 @@ CLX.GetTweet = function(hashtag){
   var tweets;
 
   function ajax(){
-    defer = $.Deferred()
+    defer = $.Deferred();
 
     return $.ajax({
       url: "http:/tweets/" + hashtag,
@@ -18,7 +18,7 @@ CLX.GetTweet = function(hashtag){
         return defer.resolve(data)
       }
     });
-  }
+  };
 
   return ajax();
 };

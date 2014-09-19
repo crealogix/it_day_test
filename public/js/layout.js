@@ -1,4 +1,4 @@
-CLX.Layout = (function(argument) {
+CLX.Layout = function(argument) {
 	$('.stock-list li').on({
 		click: function(){
 			$(this).find('.stock-options').removeClass('hide');
@@ -6,5 +6,5 @@ CLX.Layout = (function(argument) {
 		mouseleave: function(){
 			$(this).find('.stock-options').addClass('hide');	
 		}
-	})
-}());
+	});
+};
