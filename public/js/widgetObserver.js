@@ -13,11 +13,12 @@ CLX.AddToList = function(addFrom, addTo){
 			//cache tweets
 			tweets[stock] = data;
 			console.log(tweets);
-			//TO DO: set this function as a protorype to be less memory consuming!
+
+			//create instance
 			scanner = new CLX.TweetScanner();
 
 			for(i=0;i<tweets[stock].statuses.length;i++){
-				var setter = scanner.init(tweets[stock].statuses[i].text.toLowerCase());
+				var setter = scanner.instance().init(tweets[stock].statuses[i].text.toLowerCase());
 				barWidth = setter;
 			};
 

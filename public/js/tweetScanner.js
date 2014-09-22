@@ -1,5 +1,9 @@
-//function accepts a string to process
 CLX.TweetScanner = function(){
+	return;
+};
+
+//function accepts a string to process
+CLX.TweetScanner.prototype.instance = function(){
 	var string, criticalWords = {}, result = 50, i, prop, self;
 
 	self = this;
