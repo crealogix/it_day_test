@@ -2257,5 +2257,9 @@ h3{
 
 .stock-table-holder .btn{
   padding: 2px 10px;
-  margin-top: 5px;
+  margin-top: 3px;
+}
+
+.stock-table-holder li:last-child{
+  text-align: center;
 }
