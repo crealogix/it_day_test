@@ -3,7 +3,7 @@ CLX.TweetScanner = function(){
 	var string, criticalWords = {}, result = 50, i, prop, self;
 
 	self = this;
-	criticalWords.good = ['leaders', 'tackle', 'this', 'excited to see', 'launched '];
+	criticalWords.good = ['leaders', 'tackle', 'this', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services '];
 
 	function scanTweet(string){
 		for(prop in criticalWords){
