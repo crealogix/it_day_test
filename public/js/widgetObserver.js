@@ -92,9 +92,9 @@ CLX.AddToList = function(addFrom, addTo){
 		$( getForm(addFrom) ).find('input[type=text]').val('');
 	};
 
-	function getFormValue(){
+	self.getFormValue = function(value){
 		$( getForm(addFrom) ).submit(function(event){
-			var input = $(this).find('input[type=text]');
+			var input = value || $(this).find('input[type=text]');
 
 			event.preventDefault();
 
@@ -115,7 +115,7 @@ CLX.AddToList = function(addFrom, addTo){
 	};
 
 	self.init = function(){
-		getFormValue();
+		self.getFormValue();
 
 		//append modal for displaying tweets
 		if( $('.modal.fade.bs-example-modal-lg').length === 0 ){
@@ -131,4 +131,8 @@ CLX.AddToList = function(addFrom, addTo){
 
 //pass arguments wich form to observe and where to append results 
 var addTo = CLX.AddToList('stock-form', 'stock-list');
+addTo.getObserver('dow jones');
+addTo.getObserver('crealogix');
+addTo.getObserver('microsoft');
+
 addTo.init();
