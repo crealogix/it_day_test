@@ -40,9 +40,17 @@ ul {
 .full-width {
   width: 100%;
 }
+.width-7 {
+  width: 7.5% !important;
+  min-width: 7.5% !important;
+}
 .width-10 {
   width: 10% !important;
   min-width: 10% !important;
+}
+.width-12 {
+  width: 12.5% !important;
+  min-width: 12.5% !important;
 }
 .width-15 {
   width: 15% !important;
@@ -2138,7 +2146,7 @@ body, a, li{
 }
 
 .container{
-  min-width: 1000px;
+  min-width: 1080px;
 }
 
 .stock-list{
@@ -2225,7 +2233,7 @@ h3{
   color: #f7941e;
 }
 
-.indicator-positive, .indicator-neagtive{
+.indicator-positive, .indicator-negative{
   position: absolute;
   top: -10px;
 }
@@ -2236,4 +2244,18 @@ h3{
 
 .capital-text{
   text-transform: capitalize;
+}
+
+.stock-table-holder .indicator-negative, .stock-table-holder .indicator-positive{
+  top: -15px;
+  line-height: 1;
+}
+
+.stock-table-holder .mask{
+  margin-top: 0;
+}
+
+.stock-table-holder .btn{
+  padding: 2px 10px;
+  margin-top: 5px;
 }

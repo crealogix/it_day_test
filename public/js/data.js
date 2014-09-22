@@ -1,5 +1,5 @@
 //returns a PROMISE
-CLX.GetTweet = function(hashtag){
+CLX.prototype.GetTweet = function(hashtag){
   var tweets;
 
   function ajax(){
