@@ -135,4 +135,5 @@ addTo.getObserver('dow jones');
 addTo.getObserver('crealogix');
 addTo.getObserver('microsoft');
 
+
 addTo.init();
