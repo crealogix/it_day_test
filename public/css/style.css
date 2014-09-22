@@ -2233,3 +2233,7 @@ h3{
 .indicator-positive{
   right: 0;
 }
+
+.capital-text{
+  text-transform: capitalize;
+}

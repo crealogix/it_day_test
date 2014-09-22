@@ -1,11 +1,11 @@
 //function accepts a string to process
-CLX.TweetScanner = function(){
+CLX.prototype.TweetScanner = function(){
 	var string, criticalWords = {}, result = 50, i, prop, self;
 
 	self = this;
-	criticalWords.good = ['leaders', 'tackle', 'this', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services '];
+	criticalWords.good = ['leaders', 'tackle', 'user experience', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up'];
 
-	function scanTweet(string){
+	self.scanTweet = function(string){
 		for(prop in criticalWords){
 			for(i=0;i<criticalWords[prop].length;i++){
 				if( string.indexOf(criticalWords[prop][i]) > -1 ){
@@ -18,7 +18,7 @@ CLX.TweetScanner = function(){
 	//result needs to be a precentage to set the progressbar next to stock name
 	self.init = function(string){
 		string = string;
-		scanTweet(string);
+		self.scanTweet(string);
 
 		if( result < 0 ){
 			result = 0;

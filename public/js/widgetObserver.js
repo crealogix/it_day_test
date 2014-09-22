@@ -8,20 +8,20 @@ CLX.AddToList = function(addFrom, addTo){
 	defer = $.Deferred();
 
 	//get tweets
-	function getObserver(stock){
+	self.getObserver = function(stock){
 		CLX.GetTweet(stock).then(function(data){
 			//cache tweets
 			tweets[stock] = data;
 			console.log(tweets);
-			//TO DO: set this function as a protorype to be less memory consuming!
-			scanner = new CLX.TweetScanner();
+			
+			scanner = new CLX().TweetScanner();
 
 			for(i=0;i<tweets[stock].statuses.length;i++){
 				var setter = scanner.init(tweets[stock].statuses[i].text.toLowerCase());
 				barWidth = setter;
 			};
 
-			appendToList(stock);
+			self.appendToList(stock);
 
 			$('#preloader').remove();
 
@@ -53,9 +53,11 @@ CLX.AddToList = function(addFrom, addTo){
 		return subString;
 	};
 
-	function appendToList(stockName){
-		var listItemtemplate = '<li id="stock_'+ stockName +'" class="clearfix"><h4>' + stockName + '</h4> <div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-neagtive">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div><div class="stock-options hide"><input data-trade="buy" type="button" value="Buy" class="btn btn-info"><input data-trade="sell" type="button" value="Sell" class="btn btn-success"><input data-trade="stop" type="button" value="Stop tracking" class="btn btn-danger"><input data-trade="stop" type="button" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg"></div></li>';
+	self.appendToList = function(stockName){
+		var listItemtemplate = '<li id="stock_'+ stockName +'" class="clearfix"><h4 class="capital-text">' + stockName + '</h4> <div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-neagtive">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div><div class="stock-options hide"><input data-trade="buy" type="button" value="Buy" class="btn btn-info"><input data-trade="sell" type="button" value="Sell" class="btn btn-success"><input data-trade="stop" type="button" value="Stop tracking" class="btn btn-danger"><input data-trade="stop" type="button" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg"></div></li>',
+			tableRowTemplate = '<ul id="stock_'+ stockName +'" class="table-content clearfix"><li class="width-35 capital-text">'+ stockName +'</li><li class="width-10 text-center">--</li><li class="text-right ">--</li><li class="text-right ">--</li><li class="text-right width-15"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li></ul>'
 		$( getListHolder(addTo) ).append( listItemtemplate );
+		$('.stock-table-holder').append( tableRowTemplate );
 
 		//bind mouse and keyboard events
 		CLX.Layout();
@@ -102,7 +104,7 @@ CLX.AddToList = function(addFrom, addTo){
 
 			if( stocks.indexOf( input.val().toLowerCase() ) === -1 ){
 				stocks.push( input.val().toLowerCase() );
-				getObserver( input.val() );
+				self.getObserver( input.val() );
 				addPreloader('css/images/loader.gif');
 			}else{
 				alert('Allready in the Stock List!');

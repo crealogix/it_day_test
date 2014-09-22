@@ -1,7 +1,3 @@
-var CLX = function(){
-  return;
-};
-
 //returns a PROMISE
 CLX.GetTweet = function(hashtag){
   var tweets;
