@@ -1,5 +1,5 @@
 var CLX = function(){
-  return {};
+  return;
 };
 
 //returns a PROMISE
