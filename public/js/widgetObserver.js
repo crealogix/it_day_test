@@ -1,3 +1,35 @@
+//function accepts a string to process
+CLX.prototype.TweetScanner = function(){
+	var string, criticalWords = {}, result = 50, i, prop, self;
+
+	self = this;
+	criticalWords.good = ['leaders', 'tackle', 'user experience', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up', 'controller '];
+
+	self.scanTweet = function(string){
+		for(prop in criticalWords){
+			for(i=0;i<criticalWords[prop].length;i++){
+				if( string.indexOf(criticalWords[prop][i]) > -1 ){
+					result = result - 10;
+				}
+			}
+		}
+	};
+
+	//result needs to be a precentage to set the progressbar next to stock name
+	self.init = function(string){
+		string = string;
+		self.scanTweet(string);
+
+		if( result < 0 ){
+			result = 0;
+		}
+
+		return result;
+	}
+
+	return self;
+};
+
 CLX.AddToList = function(addFrom, addTo){
 	var self, clx, stocks = [], tweets = {}, defer, i, scanner, barWidth = 0,
 		modalTemplate = '<div class="modal fade bs-example-modal-lg twet-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4 class="tweet-topic capital-text"></h4><div class="tweet-list"></div></div></div></div>',
