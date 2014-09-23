@@ -150,10 +150,16 @@ CLX.AddToList = function(addFrom, addTo){
 
 //pass arguments wich form to observe and where to append results 
 var addTo = CLX.AddToList(undefined, 'stock-table-holder');
+//adding stocks
 addTo.getObserver('dow jones');
 addTo.getObserver('crealogix');
 addTo.getObserver('microsoft');
 addTo.getObserver('ibm');
-
+addTo.getObserver('Google');
+addTo.getObserver('UBS');
+addTo.getObserver('societe generale');
+addTo.getObserver('general electrics');
+addTo.getObserver('YAHOO');
+addTo.getObserver('Samsung');
 
 addTo.init();
