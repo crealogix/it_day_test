@@ -44,9 +44,11 @@ CLX.AddToList = function(addTo, addFrom){
 	clx = new CLX();
 	stockCounter = 0;
 
+	//append loader on function call
+	addPreloader('../css/images/loader.gif');
+	
 	//get tweets
 	self.getObserver = function(stock){
-		addPreloader('../css/images/loader.gif');
 		//count stocks
 		stockCounter++;
 
@@ -64,12 +66,10 @@ CLX.AddToList = function(addTo, addFrom){
 
 			stockCounter--;
 
-			// if(stockCounter === 0){
-			// 	console.log('append done!');
-			// 	$('#preloader').remove();
-			// }
-
-			$('#preloader').remove();
+			if(stockCounter === 0){
+				console.log('append done!');
+				$('#preloader').remove();
+			}
 
 			self.appendToList(stock);
 		});
