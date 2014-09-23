@@ -103,31 +103,7 @@ CLX.AddToList = function(addFrom, addTo){
 		$( getForm(addFrom) ).find('input[type=text]').val('');
 	};
 
-	self.getFormValue = function(value){
-		$( getForm(addFrom) ).submit(function(event){
-			var input = value || $(this).find('input[type=text]');
-
-			event.preventDefault();
-
-			if( input.val() === '' ){
-				return false;
-			}
-
-			if( stocks.indexOf( input.val().toLowerCase() ) === -1 ){
-				stocks.push( input.val().toLowerCase() );
-				self.getObserver( input.val() );
-				addPreloader('css/images/loader.gif');
-			}else{
-				alert('Allready in the Stock List!');
-			}
-
-			return false;
-		})
-	};
-
 	self.init = function(){
-		self.getFormValue();
-
 		//append modal for displaying tweets
 		if( $('.modal.fade.bs-example-modal-lg').length === 0 ){
 	    	$('body').append( modalTemplate );
