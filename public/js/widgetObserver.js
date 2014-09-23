@@ -3,11 +3,13 @@ CLX.prototype.TweetScanner = function(){
 	var string, criticalWords = {}, result = 50, i, prop, self;
 
 	self = this;
-	criticalWords.good = ['leaders', 'tackle', 'user experience', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up', 'controller '];
+	criticalWords.good = ['leaders', 'tackle', 'user experience', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up', 'makes it easier'];
 
+	//parse string
 	self.scanTweet = function(string){
 		for(prop in criticalWords){
 			for(i=0;i<criticalWords[prop].length;i++){
+				//if some critical work found, increse progress bar
 				if( string.indexOf(criticalWords[prop][i]) > -1 ){
 					result = result - 10;
 				}
@@ -30,20 +32,24 @@ CLX.prototype.TweetScanner = function(){
 	return self;
 };
 
-CLX.AddToList = function(addFrom, addTo){
-	var self, clx, stocks = [], tweets = {}, defer, i, scanner, barWidth = 0,
+//appending function
+CLX.AddToList = function(addTo, addFrom){
+	var self, clx, stockCounter, tweets = {}, defer, i, scanner, barWidth = 0,
 		modalTemplate = '<div class="modal fade bs-example-modal-lg twet-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4 class="tweet-topic capital-text"></h4><div class="tweet-list"></div></div></div></div>',
 		buyModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-buy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4>Buy stock: <span class="stock-to-trade"></span></h4><input placeholder="Ammount to buy" type="text" class="width-35"><input data-trade="buy" type="button" value="Buy" class="btn btn-info" placeholder="ammount"></div></div></div>',
 		sellModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-sell" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4>Sell stock: <span class="stock-to-trade"></span></h4><input placeholder="Ammount to sell" type="text" class="width-35"><input data-trade="sell" type="button" value="Sell" class="btn btn-success" placeholder="ammount"></div></div></div>';
 
 	self = this;
-	addFrom = addFrom;
-	addTo = addTo;
 	defer = $.Deferred();
 	clx = new CLX();
+	stockCounter = 0;
 
 	//get tweets
 	self.getObserver = function(stock){
+		addPreloader('../css/images/loader.gif');
+		//count stocks
+		stockCounter++;
+
 		clx.GetTweet(stock).then(function(data){
 			//cache tweets
 			tweets[stock] = data;
@@ -56,11 +62,16 @@ CLX.AddToList = function(addFrom, addTo){
 				barWidth = setter;
 			};
 
-			self.appendToList(stock);
+			stockCounter--;
+
+			// if(stockCounter === 0){
+			// 	console.log('append done!');
+			// 	$('#preloader').remove();
+			// }
 
 			$('#preloader').remove();
 
-	  		return data;
+			self.appendToList(stock);
 		});
 	};
 
@@ -75,7 +86,7 @@ CLX.AddToList = function(addFrom, addTo){
 	function addPreloader(url){
 		var preloader = '<img id="preloader" class="preloader" src="' + url +'">'
 
-		$('.stock-list').append( preloader );
+		$( getListHolder(addTo) ).append( preloader );
 	};
 
 	function formatText(string,word){
@@ -97,9 +108,8 @@ CLX.AddToList = function(addFrom, addTo){
 	});	
 
 	self.appendToList = function(stockName){
-		var listItemtemplate = '<li id="stock_'+ stockName +'" class="clearfix"><h4 class="capital-text">' + stockName + '</h4> <div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div><div class="stock-options hide"><input data-trade="buy" type="button" value="Buy" class="btn btn-info"><input data-trade="sell" type="button" value="Sell" class="btn btn-success"><input data-trade="stop" type="button" value="Stop tracking" class="btn btn-danger"><input data-trade="stop" type="button" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg"></div></li>',
-			tableRowTemplate = '<ul id="stock_'+ stockName +'" class="table-content clearfix"><li class="width-15 capital-text">'+ stockName +'</li><li class="width-7 text-center">--</li><li class="text-right width-12">--</li><li class="text-right width-12">--</li><li class="text-right width-7"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li><li class="width-25"><div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div></li><li> <input data-trade="buy" type="button" value="Buy" data-trade="buy" data-stock="' + stockName + '" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-buy"> <input data-trade="sell" type="button" value="Sell" data-stock="' + stockName + '" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-sell"> <input data-trade="stop" type="button" data-stock="' + stockName + '" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg.twet-modal"> </li></ul>'
-		$( getListHolder(addTo) ).append( tableRowTemplate );
+		var tableRowTemplate = '<ul id="stock_'+ stockName +'" class="table-content clearfix"><li class="width-15 capital-text">'+ stockName +'</li><li class="width-7 text-center">--</li><li class="text-right width-12">--</li><li class="text-right width-12">--</li><li class="text-right width-7"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li><li class="width-25"><div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div></li><li> <input data-trade="buy" type="button" value="Buy" data-trade="buy" data-stock="' + stockName + '" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-buy"> <input data-trade="sell" type="button" value="Sell" data-stock="' + stockName + '" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-sell"> <input data-trade="stop" type="button" data-stock="' + stockName + '" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg.twet-modal"> </li></ul>'
+		$( getListHolder(addTo) ).prepend( tableRowTemplate );
 
 		//bind mouse and keyboard events
 		CLX.Layout();
@@ -112,7 +122,6 @@ CLX.AddToList = function(addFrom, addTo){
 	function showTweets(){
 		$( getListHolder(addTo) ).on('click', '.getTweets', function() {
 		    var stockName = $(this).data().stock,
-		    	modalHolder = $('.modal-content'),
 		    	modalList = $('.modal-content>.tweet-list'),
 		    	modalHead = $('.modal-content>.tweet-topic'),
 		    	tweetText,
@@ -141,10 +150,12 @@ CLX.AddToList = function(addFrom, addTo){
 	    	$('body').append( modalTemplate );
 	    }
 
+	    //append modal for buying
 	    if( $('.modal.fade.bs-example-modal-lg.trade-modal-buy').length === 0 ){
 	    	$('body').append( buyModalTemplate );
 	    }
 
+	    //append modal for selling
 	    if( $('.modal.fade.bs-example-modal-lg.trade-modal-sell').length === 0 ){
 	    	$('body').append( sellModalTemplate );
 	    }
@@ -156,9 +167,10 @@ CLX.AddToList = function(addFrom, addTo){
 	return self;
 };
 
-//pass arguments wich form to observe and where to append results 
-var addTo = CLX.AddToList(undefined, 'stock-table-holder');
-//adding stocks
+//pass argument where to append results 
+var addTo = CLX.AddToList('stock-table-holder');
+
+//adding tweets to observe
 addTo.getObserver('dow jones');
 addTo.getObserver('crealogix');
 addTo.getObserver('microsoft');
@@ -170,4 +182,5 @@ addTo.getObserver('general electrics');
 addTo.getObserver('YAHOO');
 addTo.getObserver('Samsung');
 
+//initialize
 addTo.init();
