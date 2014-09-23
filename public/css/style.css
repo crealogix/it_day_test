@@ -2263,3 +2263,12 @@ h3{
 .stock-table-holder li:last-child{
   text-align: center;
 }
+
+.trade-modal-buy .btn, .trade-modal-sell .btn{
+  padding: 2px 10px;
+}
+
+.trade-modal-buy input[type="text"], .trade-modal-sell input[type="text"]{
+  padding: 1px 3px;
+  margin-right: 10px;
+}
