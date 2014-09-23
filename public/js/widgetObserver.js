@@ -1,8 +1,8 @@
 CLX.AddToList = function(addFrom, addTo){
 	var self, clx, stocks = [], tweets = {}, defer, i, scanner, barWidth = 0,
 		modalTemplate = '<div class="modal fade bs-example-modal-lg twet-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content padding-20"><h4 class="tweet-topic capital-text"></h4><div class="tweet-list"></div></div></div></div>',
-		buyModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-buy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content padding-20"><h4>Buy stock: <span class="stock-to-buy"></span></h4><input placeholder="Ammount to buy" type="text" class="width-35"><input data-trade="buy" type="button" value="Buy" class="btn btn-info" placeholder="ammount"></div></div></div>',
-		sellModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-sell" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content padding-20"><h4>Sell stock: <span class="stock-to-sell"></span></h4><input placeholder="Ammount to sell" type="text" class="width-35"><input data-trade="buy" type="button" value="Buy" class="btn btn-info" placeholder="ammount"></div></div></div>';
+		buyModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-buy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content padding-20"><h4>Buy stock: <span class="stock-to-trade"></span></h4><input placeholder="Ammount to buy" type="text" class="width-35"><input data-trade="buy" type="button" value="Buy" class="btn btn-info" placeholder="ammount"></div></div></div>',
+		sellModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-sell" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content padding-20"><h4>Sell stock: <span class="stock-to-trade"></span></h4><input placeholder="Ammount to sell" type="text" class="width-35"><input data-trade="sell" type="button" value="Sell" class="btn btn-success" placeholder="ammount"></div></div></div>';
 
 	self = this;
 	addFrom = addFrom;
@@ -56,13 +56,12 @@ CLX.AddToList = function(addFrom, addTo){
 		return subString;
 	};
 
-	self.tradeStock = function(){
-		
-	};
+	$( getListHolder(addTo) ).on('click', '.btn[data-trade]', function(){
+		var stockName = $(this).data().stock,
+			stockNameHolder = $('.stock-to-trade');
 
-	$( getListHolder(addTo) ).on('click', '.btn[data-trade="buy"]', function(){
-		self.tradeStock();
-	});
+		stockNameHolder.text(stockName);
+	});	
 
 	self.appendToList = function(stockName){
 		var listItemtemplate = '<li id="stock_'+ stockName +'" class="clearfix"><h4 class="capital-text">' + stockName + '</h4> <div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div><div class="stock-options hide"><input data-trade="buy" type="button" value="Buy" class="btn btn-info"><input data-trade="sell" type="button" value="Sell" class="btn btn-success"><input data-trade="stop" type="button" value="Stop tracking" class="btn btn-danger"><input data-trade="stop" type="button" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg"></div></li>',
@@ -153,6 +152,7 @@ var addTo = CLX.AddToList(undefined, 'stock-table-holder');
 addTo.getObserver('dow jones');
 addTo.getObserver('crealogix');
 addTo.getObserver('microsoft');
+addTo.getObserver('ibm');
 
 
 addTo.init();

@@ -2266,9 +2266,15 @@ h3{
 
 .trade-modal-buy .btn, .trade-modal-sell .btn{
   padding: 2px 10px;
+  margin-top: -4px;
 }
 
 .trade-modal-buy input[type="text"], .trade-modal-sell input[type="text"]{
   padding: 1px 3px;
   margin-right: 10px;
+}
+
+.stock-to-trade{
+  color: #f7941e;
+  text-transform: capitalize;
 }
