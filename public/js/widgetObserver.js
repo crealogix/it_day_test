@@ -60,6 +60,7 @@ CLX.AddToList = function(addFrom, addTo){
 		var stockName = $(this).data().stock,
 			stockNameHolder = $('.stock-to-trade');
 
+		$('.modal.fade.bs-example-modal-lg').find('input[type=text]').val('');
 		stockNameHolder.text(stockName);
 	});	
 
