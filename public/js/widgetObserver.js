@@ -55,6 +55,14 @@ CLX.AddToList = function(addTo, addFrom){
 		clx.GetTweet(stock).then(function(data){
 			//cache tweets
 			tweets[stock] = data;
+
+			if( typeof tweets[stock].statuses === 'undefined' ){
+				console.log(tweets[stock]+' FAILED');
+				stockCounter--;
+				clx.GetTweet(stock);
+				return false;
+			}
+
 			console.log(tweets);
 			
 			scanner = clx.TweetScanner();
@@ -171,11 +179,11 @@ CLX.AddToList = function(addTo, addFrom){
 var addTo = CLX.AddToList('stock-table-holder');
 
 //adding tweets to observe
-addTo.getObserver('UBS');
+addTo.getObserver('IBM');
 addTo.getObserver('societe generale');
 addTo.getObserver('general electrics');
 addTo.getObserver('YAHOO');
-addTo.getObserver('Samsung');
+addTo.getObserver('Microsoft');
 
 //initialize
 addTo.init();
