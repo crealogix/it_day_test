@@ -67,7 +67,7 @@ CLX.AddToList = function(addTo, addFrom){
 			stockCounter--;
 
 			self.appendToList(stock);
-			
+
 			if(stockCounter === 0){
 				console.log('append done!');
 				$('#preloader').remove();
@@ -171,11 +171,6 @@ CLX.AddToList = function(addTo, addFrom){
 var addTo = CLX.AddToList('stock-table-holder');
 
 //adding tweets to observe
-addTo.getObserver('dow jones');
-addTo.getObserver('crealogix');
-addTo.getObserver('microsoft');
-addTo.getObserver('ibm');
-addTo.getObserver('Google');
 addTo.getObserver('UBS');
 addTo.getObserver('societe generale');
 addTo.getObserver('general electrics');
