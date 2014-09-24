@@ -46,7 +46,7 @@ CLX.AddToList = function(addTo, addFrom){
 
 	//append loader on function call
 	addPreloader('../css/images/loader.gif');
-	
+
 	//get tweets
 	self.getObserver = function(stock){
 		//count stocks
@@ -66,12 +66,12 @@ CLX.AddToList = function(addTo, addFrom){
 
 			stockCounter--;
 
+			self.appendToList(stock);
+			
 			if(stockCounter === 0){
 				console.log('append done!');
 				$('#preloader').remove();
 			}
-
-			self.appendToList(stock);
 		});
 	};
 
@@ -109,7 +109,7 @@ CLX.AddToList = function(addTo, addFrom){
 
 	self.appendToList = function(stockName){
 		var tableRowTemplate = '<ul id="stock_'+ stockName +'" class="table-content clearfix"><li class="width-15 capital-text">'+ stockName +'</li><li class="width-7 text-center">--</li><li class="text-right width-12">--</li><li class="text-right width-12">--</li><li class="text-right width-7"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li><li class="width-25"><div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div></li><li> <input data-trade="buy" type="button" value="Buy" data-trade="buy" data-stock="' + stockName + '" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-buy"> <input data-trade="sell" type="button" value="Sell" data-stock="' + stockName + '" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-sell"> <input data-trade="stop" type="button" data-stock="' + stockName + '" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg.twet-modal"> </li></ul>'
-		$( getListHolder(addTo) ).prepend( tableRowTemplate );
+		$( '.preloader' ).before( $(tableRowTemplate) );
 
 		//bind mouse and keyboard events
 		CLX.Layout();
