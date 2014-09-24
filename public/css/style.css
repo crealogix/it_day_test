@@ -2209,7 +2209,8 @@ h3{
 }
 
 .preloader{
-  width: 51px;
+  width: 46px;
+  padding: 5px;
   display: block;
   margin: 0 auto;
 }
