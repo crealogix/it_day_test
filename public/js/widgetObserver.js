@@ -57,7 +57,7 @@ CLX.AddToList = function(addTo, addFrom){
 			tweets[stock] = data;
 
 			if( typeof tweets[stock].statuses === 'undefined' ){
-				console.log(tweets[stock]+' FAILED');
+				console.log( stock +' load FAILED');
 				stockCounter--;
 				clx.GetTweet(stock);
 				return false;
