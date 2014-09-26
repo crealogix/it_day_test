@@ -1,3 +1,8 @@
+//global wrapper object
+var CLX = function(){
+  return;
+};
+
 //returns a PROMISE
 CLX.prototype.GetTweet = function(hashtag){
   var tweets;
