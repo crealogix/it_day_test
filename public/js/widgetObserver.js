@@ -1,9 +1,9 @@
-//function accepts a string to process
+//.init of a function accepts a string to process
 CLX.prototype.TweetScanner = function(){
 	var string, criticalWords = {}, result = 50, i, prop, self;
 
 	self = this;
-	criticalWords.good = ['leaders', 'tackle', 'user experience', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up', 'makes it easier'];
+	criticalWords.good = ['upgrade', 'tackle', 'brand new', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up', 'makes it easier', 'happy'];
 
 	//parse string
 	self.scanTweet = function(string){
@@ -34,7 +34,7 @@ CLX.prototype.TweetScanner = function(){
 
 //appending function
 CLX.AddToList = function(addTo, addFrom){
-	var self, clx, stockCounter, tweets = {}, defer, i, scanner, barWidth = 0,
+	var self, clx, stockCounter, tweets = {}, defer, i, scanner, barWidth = 0, failedToLoad = [],
 		modalTemplate = '<div class="modal fade bs-example-modal-lg twet-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4 class="tweet-topic capital-text"></h4><div class="tweet-list"></div></div></div></div>',
 		buyModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-buy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4>Buy stock: <span class="stock-to-trade"></span></h4><input placeholder="Ammount to buy" type="text" class="width-35"><input data-trade="buy" type="button" value="Buy" class="btn btn-info" placeholder="ammount"></div></div></div>',
 		sellModalTemplate = '<div class="modal fade bs-example-modal-lg trade-modal-sell" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4>Sell stock: <span class="stock-to-trade"></span></h4><input placeholder="Ammount to sell" type="text" class="width-35"><input data-trade="sell" type="button" value="Sell" class="btn btn-success" placeholder="ammount"></div></div></div>';
@@ -57,9 +57,16 @@ CLX.AddToList = function(addTo, addFrom){
 			tweets[stock] = data;
 
 			if( typeof tweets[stock].statuses === 'undefined' ){
-				console.log( stock +' load FAILED');
+				failedToLoad.push(stock);
 				stockCounter--;
 				clx.GetTweet(stock);
+
+				if(stockCounter === 0){
+					console.log('Load done!');
+					$('#preloader').remove();
+					console.log( 'Failed to load: ' + failedToLoad );
+				}
+
 				return false;
 			}
 
@@ -79,6 +86,10 @@ CLX.AddToList = function(addTo, addFrom){
 			if(stockCounter === 0){
 				console.log('Load done!');
 				$('#preloader').remove();
+
+				if(failedToLoad.length > 0){
+					console.log( 'Failed to load: ' + failedToLoad );
+				}
 			}
 		});
 	};
