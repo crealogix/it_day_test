@@ -11,5 +11,5 @@ app.listen(3000, '127.0.0.1', function(){
 app.get('/tweets/:hashtag', function(req, res){
     backend.getTweet( req.params.hashtag ).then(function(val){
         res.send( val );
-    })
+    });
 });

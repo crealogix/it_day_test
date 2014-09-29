@@ -16,10 +16,10 @@ CLX.prototype.GetTweet = function(hashtag){
       dataType: "json",
       contentType: 'application/json; charset=utf-8',
       success: function(data){
-        return defer.resolve(data)
+        return defer.resolve(data);
       }
     });
-  };
+  }
 
   return ajax();
 };

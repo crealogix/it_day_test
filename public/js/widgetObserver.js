@@ -3,11 +3,11 @@ CLX.prototype.TweetScanner = function(){
 	var string, criticalWords = {}, result = 50, i, prop, self;
 
 	self = this;
-	criticalWords.good = ['upgrade', 'tackle', 'brand new', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up', 'makes it easier', 'happy'];
+	criticalWords.good = ['leaders', 'tackle', 'brand new', 'excited to see', 'launched ', 'future ', 'fireworks ', 'services ', 'goes up', 'going up', 'makes it easier', 'happy'];
 
 	//parse string
 	self.scanTweet = function(string){
-		for(prop in criticalWords){
+		for(var prop in criticalWords){
 			for(i=0;i<criticalWords[prop].length;i++){
 				//if some critical work found, increse progress bar
 				if( string.indexOf(criticalWords[prop][i]) > -1 ){
@@ -27,7 +27,7 @@ CLX.prototype.TweetScanner = function(){
 		}
 
 		return result;
-	}
+	};
 
 	return self;
 };
@@ -77,7 +77,7 @@ CLX.AddToList = function(addTo, addFrom){
 			for(i=0;i<tweets[stock].statuses.length;i++){
 				var setter = scanner.init(tweets[stock].statuses[i].text.toLowerCase());
 				barWidth = setter;
-			};
+			}
 
 			stockCounter--;
 
@@ -96,23 +96,22 @@ CLX.AddToList = function(addTo, addFrom){
 
 	function getListHolder(addTo){
 		return '#' + addTo;
-	};
+	}
 
 	function addPreloader(url){
-		var preloader = '<img id="preloader" class="preloader" src="' + url +'">'
+		var preloader = '<img id="preloader" class="preloader" src="' + url +'">';
 
 		$( getListHolder(addTo) ).append( preloader );
-	};
+	}
 
 	function formatText(string,word){
-		var string = string.toLowerCase();
-		var word = word;
-		var regExp = new RegExp(word, 'g');
+		var stringToFormat = string.toLowerCase(),
+			regExp = new RegExp(word, 'g');
 
-		subString = string.replace(regExp, '<span class="highlight">' + word + '</span>');
+		subString = stringToFormat.replace(regExp, '<span class="highlight">' + word + '</span>');
 
 		return subString;
-	};
+	}
 
 	$( getListHolder(addTo) ).on('click', '.btn[data-trade]', function(){
 		var stockName = $(this).data().stock,
@@ -123,7 +122,7 @@ CLX.AddToList = function(addTo, addFrom){
 	});	
 
 	self.appendToList = function(stockName){
-		var tableRowTemplate = '<ul id="stock_'+ stockName +'" class="table-content clearfix"><li class="width-15 capital-text">'+ stockName +'</li><li class="width-7 text-center">--</li><li class="text-right width-12">--</li><li class="text-right width-12">--</li><li class="text-right width-7"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li><li class="width-25"><div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div></li><li> <input data-trade="buy" type="button" value="Buy" data-trade="buy" data-stock="' + stockName + '" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-buy"> <input data-trade="sell" type="button" value="Sell" data-stock="' + stockName + '" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-sell"> <input data-trade="stop" type="button" data-stock="' + stockName + '" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg.twet-modal"> </li></ul>'
+		var tableRowTemplate = '<ul id="stock_'+ stockName +'" class="table-content clearfix"><li class="width-15 capital-text">'+ stockName +'</li><li class="width-7 text-center">--</li><li class="text-right width-12">--</li><li class="text-right width-12">--</li><li class="text-right width-7"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li><li class="width-25"><div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div></li><li> <input data-trade="buy" type="button" value="Buy" data-trade="buy" data-stock="' + stockName + '" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-buy"> <input data-trade="sell" type="button" value="Sell" data-stock="' + stockName + '" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg.trade-modal-sell"> <input data-trade="stop" type="button" data-stock="' + stockName + '" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg.twet-modal"> </li></ul>';
 		$( '.preloader' ).before( $(tableRowTemplate) );
 	};
 
@@ -147,7 +146,7 @@ CLX.AddToList = function(addTo, addFrom){
 		    	modalList.append( 'By ' + userName + ':  ' + formatText(tweetText, stockName.toLowerCase() ) + '<br/>');
 		    }
 		});
-	};
+	}
 
 	self.init = function(){
 		//append modal for displaying tweets
