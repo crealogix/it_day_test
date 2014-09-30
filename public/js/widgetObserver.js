@@ -3,7 +3,7 @@ CLX.prototype.TweetScanner = function(){
 	var string, criticalWords = {}, result = 50, i, prop, self;
 
 	self = this;
-	criticalWords.good = ['leaders', 'tackle', 'brand new', 'excited to see', 'launched ', 'future', 'fireworks ', 'deal to close', 'goes up', 'going up', 'makes it easier', 'happy'];
+	criticalWords.good = ['brand new', 'excited to see', 'launched ', 'future', 'deal to close', 'goes up', 'makes it easier', 'happy'];
 
 	//parse string
 	self.scanTweet = function(string){
@@ -180,6 +180,7 @@ addTo.getObserver('Societe Generale');
 addTo.getObserver('General Electrics');
 addTo.getObserver('YAHOO');
 addTo.getObserver('Microsoft');
+addTo.getObserver('Google');
 
 //initialize
 addTo.init();
