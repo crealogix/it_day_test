@@ -170,14 +170,16 @@ CLX.AddToList = function(addTo, addFrom){
 	eventer(messageEvent,function(event) {
 	  	console.log(event.data);
 	  	var targetId = "stock_" + event.data.stockName.split(' ').join('_'),
-	  		parsedStockName = event.data.stockName.split(' ').join('_'),
+	  		parsedStockName = event.data.stockName.split(' ').join('_').toLowerCase(),
 	  		currAmount = parseInt ( $('#' + targetId ).find('.amount').text() ), 
 	  		reqAmount = parseInt( event.data.amount ),
 	  		eventType = event.data.tradeType;
 
 	  		if( eventType === "buy" ){
 	  			$("#" + targetId).find('.amount').text( currAmount + reqAmount );
+	  			tweets[parsedStockName]['amount'] = currAmount + reqAmount;
 	  		}else if( eventType === "sell" ){
+	  			tweets[parsedStockName]['amount'] = currAmount - reqAmount;
 	  			$("#" + targetId).find('.amount').text( currAmount - reqAmount )
 	  		}
 	},false);
