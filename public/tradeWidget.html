@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <h3>Trading Manager</h3>
+        <form id="tradeForm" action="" class="widget-holder padding-20">
+            <span>You want to: </span><span id="trade-type"></span>  <span id="trade-stock"></span><br>
+            <input type="button" id="trade" value="Trade"/>
+            <input type="text" id="amount" placeholder="Amount" disabled/>
+        </form>
+    </body>
+
+    <script>
+		function listener(event){
+			var allowedTransaction = ['Buy', 'Sell'], style = ['#5bc0de', '#5cb85c'], indexAt,
+				tradeTypeText = document.getElementById("trade-type"),
+				tradeStock = document.getElementById("trade-stock"),
+				input = document.getElementById("amount"),
+				submit = document.getElementById("trade"),
+				stockName = event.data.stockName,
+				tradeType = event.data.tradeType;
+
+			if( allowedTransaction.indexOf( event.data.tradeType ) === -1 ){
+				return false;
+			}
+
+			response = event.data.tradeType + " " + input.value + " stocks";
+
+			indexAt = allowedTransaction.indexOf( event.data.tradeType );
+
+	  		tradeTypeText.innerHTML = tradeType;
+	  		tradeTypeText.style.color = style[indexAt];
+	  		tradeStock.innerHTML = stockName + " stocks";
+
+	  		input.removeAttribute("disabled");
+
+	  		submit.onclick = function(){
+	  			responser(stockName, input.value, tradeType);
+	  			input.value = "";
+	  		};
+		};
+
+		function responser(stockName, amount, tradeType){
+			var response = {};
+
+			response.tradeType = tradeType.toLowerCase();
+			response.stockName = stockName;
+			response.amount = amount;
+
+			parent.postMessage(response, location.href);
+		};
+
+		if (window.addEventListener){
+		  addEventListener("message", listener, false)
+		} else {
+		  attachEvent("onmessage", listener)
+		}
+	</script>
+
+</html>
