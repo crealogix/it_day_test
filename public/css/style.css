@@ -2270,3 +2270,11 @@ h3{
 .stock-table-holder .btn{
   margin: 0 2px;  
 }
+
+.border-1{
+  border: solid 5px #dbdbdb;
+}
+
+.sell .btn.btn-info, .buy .btn.btn-success{
+  display: none;
+}
