@@ -2278,3 +2278,10 @@ h3{
 .sell .btn.btn-info, .buy .btn.btn-success{
   display: none;
 }
+
+#tradeWidget{
+  width: 100%; 
+  height:140px;
+  padding: 20px; 
+  padding-top: 0;
+}

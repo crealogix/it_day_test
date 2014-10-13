@@ -8,6 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -18,10 +20,14 @@
         <h3>Trading Manager</h3>
         <form id="tradeForm" action="" class="widget-holder padding-20">
             <span>You want to: </span><span id="trade-type"></span>  <span id="trade-stock"></span><br>
-            <input type="button" id="trade" value="Trade"/>
-            <input type="text" id="amount" placeholder="Amount" disabled/>
+            <div class="input-group col-md-5">
+		      <input type="text" class="form-control" id="amount" placeholder="Amount" disabled>
+		      <span class="input-group-addon btn-warning btn" id="trade">Trade</span>
+		    </div>
         </form>
     </body>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <script>
 		function listener(event){
@@ -68,6 +74,24 @@
 		} else {
 		  attachEvent("onmessage", listener)
 		}
+
+		$(document).ready(function() {
+		    $("#amount").keydown(function (e) {
+		        // Allow: backspace, delete, tab, escape, enter and .
+		        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+		             // Allow: Ctrl+A
+		            (e.keyCode == 65 && e.ctrlKey === true) || 
+		             // Allow: home, end, left, right
+		            (e.keyCode >= 35 && e.keyCode <= 39)) {
+		                 // let it happen, don't do anything
+		                 return;
+		        }
+		        // Ensure that it is a number and stop the keypress
+		        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+		            e.preventDefault();
+		        }
+		    });
+		});
 	</script>
 
 </html>
