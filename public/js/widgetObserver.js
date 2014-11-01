@@ -47,11 +47,11 @@ CLX.AddToList = function(addTo, addFrom){
 			}
 
 			if( barWidth < 50 ){
-				action = "buy"
+				action = "buy";
 			}else if( barWidth > 50 ){
-				action = "sell"
+				action = "sell";
 			}else{
-				action = "hold"
+				action = "hold";
 			}
 
 			stockCounter--;
@@ -107,9 +107,32 @@ CLX.AddToList = function(addTo, addFrom){
 	};
 
 	self.appendToList = function(stockName, amount, action){
-		var stockNameParsed = stockName.split(' ').join('_'),
-			amount = amount || 0, 
-			tableRowTemplate = '<ul id="stock_'+ stockNameParsed +'" class="table-content clearfix ' + action +'"><li class="width-15 capital-text">'+ stockName +'</li><li class="amount width-7 text-center">' + amount + '</li><li class="text-right width-12">--</li><li class="text-right width-12">--</li><li class="text-right width-7"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li><li class="width-25"><div class="indicator"><span class="indicator-positive">Positive</span><span class="indicator-negative">Negative</span><span class="mask" style="width:'+ barWidth +'%"></span><span class="bar"></span></div></li><li> <input data-trade="Buy" type="button" value="Buy" data-stock="' + stockName + '" class="btn btn-info"> <input data-trade="Sell" type="button" value="Sell" data-stock="' + stockName + '" class="btn btn-success"> <input data-trade="stop" type="button" data-stock="' + stockName + '" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg.twet-modal"> </li></ul>';
+    var stockNameParsed, tableRowTemplate;
+
+		stockNameParsed = stockName.split(' ').join('_');
+    amount = amount || 0;
+
+		tableRowTemplate = 
+      '<ul id="stock_'+ stockNameParsed +'" class="table-content clearfix ' + action +'">' + 
+        '<li class="width-15 capital-text">'+ stockName +'</li>' +
+        '<li class="amount width-7 text-center">' + amount + '</li>' +
+        '<li class="text-right width-12">--</li>' + 
+        '<li class="text-right width-12">--</li>' + 
+        '<li class="text-right width-7"><p class="font-12-success padding-5-0"><span class="font-bold"> -- %</span></p></li>' + 
+        '<li class="width-25">' + 
+          '<div class="indicator">' +
+            '<span class="indicator-positive">Positive</span>' +
+            '<span class="indicator-negative">Negative</span>' +
+            '<span class="mask" style="width:'+ barWidth +'%"></span>' +
+            '<span class="bar"></span>' +
+          '</div>' +
+        '</li>' +
+        '<li>' + 
+          '<input data-trade="Buy" type="button" value="Buy" data-stock="' + stockName + '" class="btn btn-info">' +
+          '<input data-trade="Sell" type="button" value="Sell" data-stock="' + stockName + '" class="btn btn-success">' +
+          '<input data-trade="stop" type="button" data-stock="' + stockName + '" value="Tweets" class="btn btn-primary getTweets" data-toggle="modal" data-target=".bs-example-modal-lg.twet-modal">' +
+        '</li>' +
+      '</ul>';
 		$( '.preloader' ).before( $(tableRowTemplate) );
 	};
 
@@ -156,15 +179,15 @@ CLX.AddToList = function(addTo, addFrom){
 
 	  		if( eventType === "buy" ){
 	  			$("#" + targetId).find('.amount').text( currAmount + reqAmount );
-	  			tweets[parsedStockName]['amount'] = currAmount + reqAmount;
+	  			tweets[parsedStockName].amount = currAmount + reqAmount;
 	  		}else if( eventType === "sell" ){
 	  			if( currAmount <  reqAmount){
-	  				alert('Insufficient amount of stocks!')
+	  				alert('Insufficient amount of stocks!');
 	  				return false;
 	  			}
 
-	  			tweets[parsedStockName]['amount'] = currAmount - reqAmount;
-	  			$("#" + targetId).find('.amount').text( currAmount - reqAmount )
+	  			tweets[parsedStockName].amount = currAmount - reqAmount;
+	  			$("#" + targetId).find('.amount').text( currAmount - reqAmount );
 	  		}
 	},false);
 
