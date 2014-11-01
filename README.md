@@ -14,4 +14,4 @@ Web app to demo stock forcasts based on twitter searches.
 - open terminal
 - cd *this source code*
 - npm start
-- open in browser http://localhost:3000
+- open in browser *http://localhost:3000*
