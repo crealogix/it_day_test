@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   function listener(event){
     var allowedTransaction = ['Buy', 'Sell'], style = ['#5bc0de', '#5cb85c'], indexAt,
       tradeTypeText = document.getElementById("trade-type"),
@@ -12,7 +14,7 @@
       return false;
     }
 
-    response = event.data.tradeType + " " + input.value + " stocks";
+    var response = event.data.tradeType + " " + input.value + " stocks";
 
     indexAt = allowedTransaction.indexOf( event.data.tradeType );
 
