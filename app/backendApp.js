@@ -2,10 +2,10 @@ var twitter = require('twitter'),
 	Q = require('q');
 
 var twit = new twitter({
-    consumer_key: 'your consumer key',
-    consumer_secret: 'your consumer secret',
-    access_token_key: 'your access token key',
-    access_token_secret: 'your access token secret'
+  consumer_key: 'dDDYuvE5eyBsAD0ouOK1C7MtQ',
+  consumer_secret: 'NrNzM1Ej7qfdfH0YDpdY6mwU0oJkIddSH3gqNJbDqs93KP5OXZ',
+  access_token_key: '1129618712-GTaSK0N8UtSDZJTA0Kklgpn9wlZk1adL3vokAnp',
+  access_token_secret: 'FpzsoOQaHHtSltwlnpFL8urLaxamUjM3nZZEHv4B3hv2C'
 });
 
 exports.getTweet = function( hashtag ){
