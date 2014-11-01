@@ -1,7 +1,17 @@
 //appending function
 CLX.AddToList = function(addTo, addFrom){
 	var self, clx, stockCounter, tweets = {}, defer, i, scanner, barWidth = 0, failedToLoad = [],
-		tweetsModalTemplate = '<div class="modal fade bs-example-modal-lg twet-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><div class="modal-content padding-20"><h4 class="tweet-topic capital-text"></h4><div class="tweet-list"></div></div></div></div>';
+		tweetsModalTemplate =
+      '<div class="modal fade bs-example-modal-lg twet-modal" tabindex="-1" ' +
+            'role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">' +
+        '<div class="modal-dialog modal-lg">' +
+          '<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>' +
+          '<div class="modal-content padding-20">' +
+            '<h4 class="tweet-topic capital-text"></h4>' +
+            '<div class="tweet-list"></div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
 
 	self = this;
 	defer = $.Deferred();
@@ -41,16 +51,16 @@ CLX.AddToList = function(addTo, addFrom){
 			
 			scanner = clx.TweetScanner();
 
-			for(i=0;i<tweets[stockNameParsed].statuses.length;i++){
+			for (i=0; i<tweets[stockNameParsed].statuses.length; i++) {
 				var setter = scanner.init(tweets[stockNameParsed].statuses[i].text.toLowerCase());
 				barWidth = setter;
 			}
 
-			if( barWidth < 50 ){
+			if (barWidth < 50) {
 				action = "buy";
-			}else if( barWidth > 50 ){
+			} else if( barWidth > 50) {
 				action = "sell";
-			}else{
+			} else {
 				action = "hold";
 			}
 
@@ -58,7 +68,7 @@ CLX.AddToList = function(addTo, addFrom){
 
 			self.appendToList(stock, amount, action);
 
-			if(stockCounter === 0){
+			if (stockCounter === 0) {
 				console.log('Load done!');
 				$('#preloader').remove();
 
@@ -165,39 +175,39 @@ CLX.AddToList = function(addTo, addFrom){
 	var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 
 	// Listen to message from child window
-	eventer(messageEvent,function(event) {
-	  	console.log(event.data);
-	  	var targetId = "stock_" + event.data.stockName.split(' ').join('_'),
-	  		parsedStockName = event.data.stockName.split(' ').join('_').toLowerCase(),
-	  		currAmount = parseInt ( $('#' + targetId ).find('.amount').text() ), 
-	  		reqAmount = parseInt( event.data.amount ),
-	  		eventType = event.data.tradeType;
+	eventer(messageEvent, function(event) {
+    console.log(event.data);
+    var targetId = "stock_" + event.data.stockName.split(' ').join('_'),
+      parsedStockName = event.data.stockName.split(' ').join('_').toLowerCase(),
+      currAmount = parseInt ( $('#' + targetId ).find('.amount').text() ), 
+      reqAmount = parseInt( event.data.amount ),
+      eventType = event.data.tradeType;
 
-	  		if(event.data.amount === ""){
-	  			return false;
-	  		}
+      if (event.data.amount === "") {
+        return false;
+      }
 
-	  		if( eventType === "buy" ){
-	  			$("#" + targetId).find('.amount').text( currAmount + reqAmount );
-	  			tweets[parsedStockName].amount = currAmount + reqAmount;
-	  		}else if( eventType === "sell" ){
-	  			if( currAmount <  reqAmount){
-	  				alert('Insufficient amount of stocks!');
-	  				return false;
-	  			}
+      if (eventType === "buy" ) {
+        $("#" + targetId).find('.amount').text( currAmount + reqAmount );
+        tweets[parsedStockName].amount = currAmount + reqAmount;
+      } else if (eventType === "sell" ) {
+        if (currAmount < reqAmount) {
+          alert('Insufficient amount of stocks!');
+          return false;
+        }
 
-	  			tweets[parsedStockName].amount = currAmount - reqAmount;
-	  			$("#" + targetId).find('.amount').text( currAmount - reqAmount );
-	  		}
+        tweets[parsedStockName].amount = currAmount - reqAmount;
+        $("#" + targetId).find('.amount').text( currAmount - reqAmount );
+      }
 	},false);
 
 	self.init = function(){
 		//append modal for displaying tweets
-		if( $('.modal.fade.bs-example-modal-lg').length === 0 ){
-	    	$('body').append( tweetsModalTemplate );
-	    }
+		if ($('.modal.fade.bs-example-modal-lg').length === 0) {
+      $('body').append( tweetsModalTemplate );
+    }
 
-	    //bind show tweets event
+    //bind show tweets event
 		showTweets();
 	};
 
