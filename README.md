@@ -5,6 +5,7 @@ Web app to demo stock forcasts based on twitter searches.
 ## Setup
 
 - install node.js (http://nodejs.org/)
+  - windows users might have to create the directory *C:\Users\<username>\AppData\Roaming\npm* manually
 - get this source code (github fork, git clone, or download zip)
 - open terminal
 - cd *this source code*
@@ -25,3 +26,5 @@ In *public/js/data.js*:
 
 1. update *CLX.prototype.GetTweet* to change tweet search
 2. update *self.scanTweet* to interpret tweets differently
+
+Infos twitter API: *https://dev.twitter.com/rest/public/search*
